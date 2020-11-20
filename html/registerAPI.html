@@ -102,65 +102,68 @@
         </div>
     </section>
 
-        <!-- MENU TO EDIT THE API -->
-        <aside id="menuApi">
-            <nav class="navApi">
-                <li> <a href="#">cdastrar</a> </li>
-                <li> <a href="#">editar</a> </li>
-                <li> <a href="#">remover</a> </li>
-            </nav>
-        </aside>
-    
-        <!-- PAGE BODDY -->
-        <main class="mainContent
-                       col-desktop-7
-                       col-tablet-8
-                       col-mobile-12">
+ <!-- MENU TO EDIT THE API -->
+ <aside id="menuApi">
+    <nav class="navApi">
+        <li> <a href="listAPI.html">listar</a> </li>
+        <li> <a href="registerAPI.html">cadastrar</a> </li>
+        <li> <a href="editAPI.html">editar</a> </li>
+        <li> <a href="removeAPI.html">remover</a> </li>
+    </nav>
+</aside>
 
-            <section  class="apiRegistration">
-                <h1>cadastre aqui as informações da API!</h1>
-                <form>
+<!-- PAGE BODDY -->
+<main class="mainContent
+               col-desktop-7
+               col-tablet-8
+               col-mobile-12">
 
-                    <div>
-                        <label for="starNature">Natureza do corpo celeste</label>
-                        <input type="text" id="starNature">
-                    </div>
+    <section  class="apiRegistration">
+        <h1>cadastre aqui as informações da API!</h1>
+        <h4 id="h4"></h4>
 
-                    <div>
-                        <label for="starName">Nome do corpo celeste</label>
-                        <input type="text" id="starName">
-                    </div>
+        <form action="/register" method="POST" onsubmit="return validaApi()">
 
-                    <div>
-                        <label for="starTemperature">Temperatura do corpo celeste</label>
-                        <input type="text" id="starTemperature">
-                    </div>
+            <div>
+                <label for="starNature">Natureza do corpo celeste</label>
+                <input type="text" name="starNature" id="starNature">
+            </div>
 
-                    <div>
-                        <label for="starOrbit">Órbita do corpo celeste</label>
-                        <input type="text" id="starOrbit">
-                    </div>
+            <div>
+                <label for="starName">Nome do corpo celeste</label>
+                <input type="text" name="starName" id="starName">
+            </div>
 
-                    <div>
-                        <label for="starDistance">Distância do corpo celeste</label>
-                        <input type="text" id="starDistance">
-                    </div>       
-                   
-                    <div>
-                        <label for="starAtsmophere">Atsmofera do corpo celeste</label>
-                        <input type="text" id="starAtsmophere">
-                    </div>
+            <div>
+                <label for="starTemperature">Temperatura do corpo celeste</label>
+                <input type="text" name="starTemperature" id="starTemperature">
+            </div>
 
-                    <div>
-                        <label for="starComposition">Composição do corpo celeste</label>
-                        <input type="text" id="starComposition">
-                    </div>
+            <div>
+                <label for="starOrbit">Órbita do corpo celeste</label>
+                <input type="text" name="starOrbit" id="starOrbit">
+            </div>
 
-                    <input type="button" value="Cadastrar">
+            <div>
+                <label for="starDistance">Distância do corpo celeste</label>
+                <input type="text" name="starDistance" id="starDistance">
+            </div>       
+           
+            <div>
+                <label for="starAtsmophere">Atsmofera do corpo celeste</label>
+                <input type="text" name="starAtsmophere" id="starAtsmophere">
+            </div>
 
-                </form>
-            </section>
-        </main>
+            <div>
+                <label for="starComposition">Composição do corpo celeste</label>
+                <input type="text" name="starComposition" id="starComposition">
+            </div>
+
+            <input type="submit" value="Cadastrar">
+
+        </form>
+    </section>
+</main>
         
         <!-- FOOTER -->
         <footer>
@@ -173,6 +176,7 @@
 
     
     <!-- JS -->
+    <script src="../js/validation.js"></script>
     <script src="../js/animation.js"></script>
     <script src="../js/carousel.js"></script>
 </body>

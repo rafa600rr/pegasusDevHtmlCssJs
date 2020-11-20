@@ -1,4 +1,4 @@
-// VALIDACAO DE LOGIN
+// VALIDATION DE LOGIN
 function login(){
 
     let retorno = true;
@@ -80,4 +80,77 @@ function sendsForm(){
 
     return retorno;
     
+}
+
+// VALIDATION API
+function validaApi(){
+
+    let retorno = true;
+
+    let starNature = document.getElementById("starNature");
+    let starName = document.getElementById("starName");
+    let starTemperature = document.getElementById("starTemperature");
+    let starOrbit = document.getElementById("starOrbit");
+    let starDistance = document.getElementById("starDistance");
+    let starAtsmophere = document.getElementById("starAtsmophere");
+    let starComposition = document.getElementById("starComposition");
+
+        if(starNature.value == ""){
+            document.getElementById("starNature").style.border = "1px solid red";
+            document.getElementById("h4").innerHTML = "Este campo deve ser preenchido!";
+            return false;
+        }else{
+            document.getElementById("starNature").style.border = "1px solid green";
+        }
+
+        if(starName.value == ""){
+            document.getElementById("starName").style.border = "1px solid red";
+            document.getElementById("h4").innerHTML = "Este campo deve ser preenchido!";
+            return false;
+        }else{
+            document.getElementById("starName").style.border = "1px solid green";
+        }
+
+        if(starTemperature.value == ""){
+            document.getElementById("starTemperature").style.border = "1px solid red";
+            document.getElementById("h4").innerHTML = "Este campo deve ser preenchido!";
+            return false;
+        }else{
+            document.getElementById("starTemperature").style.border = "1px solid green";
+        }
+
+        if(starOrbit.value == ""){
+            document.getElementById("starOrbit").style.border = "1px solid red";
+            document.getElementById("h4").innerHTML = "Este campo deve ser preenchido!";
+            return false;
+        }else{
+            document.getElementById("starOrbit").style.border = "1px solid green";
+        }
+
+        if(starDistance.value == ""){
+            document.getElementById("starDistance").style.border = "1px solid red";
+            document.getElementById("h4").innerHTML = "Este campo deve ser preenchido!";
+            return false;
+        }else{
+            document.getElementById("starDistance").style.border = "1px solid green";
+        }
+
+        if(starAtsmophere.value == ""){
+            document.getElementById("starAtsmophere").style.border = "1px solid red";
+            document.getElementById("h4").innerHTML = "Este campo deve ser preenchido!";
+            return false;
+        }else{
+            document.getElementById("starAtsmophere").style.border = "1px solid green";
+        }
+
+        if(starComposition.value == ""){
+            document.getElementById("starComposition").style.border = "1px solid red";
+            document.getElementById("h4").innerHTML = "Este campo deve ser preenchido!";
+            return false;
+        }else{
+            document.getElementById("starComposition").style.border = "1px solid green";
+        }
+
+    return retorno;
+
 }

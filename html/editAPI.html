@@ -9,11 +9,13 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../css/json.css">
     <link rel="stylesheet" href="../css/stilos.css">
-    <link rel="stylesheet" href="../css/mobile.css" media="screen and (max-width:400px)">
-    <link rel="stylesheet" href="../css/mobile-ls.css" media="screen and (min-width:401px) and (max-width:580px)">
+    <link rel="stylesheet" href="../css/mobile.css" media="screen and (max-width:200px)">
+    <link rel="stylesheet" href="../css/mobile-ls.css" media="screen and (min-width:201px) and (max-width:580px)">
     <link rel="stylesheet" href="../css/tablet.css" media="screen and (min-width:581px) and (max-width:900px)">
     <link rel="stylesheet" href="../css/desktop.css" media="screen and (min-width:901px)">
 
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 </head>
 <body>
 
@@ -57,7 +59,7 @@
             </div>
         </section>
     </header>
-
+    
     <!-- MENU + CAROUSEL -->
     <section class="menuCarousel">
         <!-- SIDE IMAGE MENU -->
@@ -102,55 +104,63 @@
         </div>
     </section>
 
-        <!--  PAGE BODY -->
+<!-- MENU TO EDIT THE API -->
+        <aside id="menuApi">
+            <nav class="navApi">
+                <li> <a href="listAPI.html">listar</a> </li>
+                <li> <a href="registerAPI.html">cadastrar</a> </li>
+                <li> <a href="editAPI.html">editar</a> </li>
+                <li> <a href="removeAPI.html">remover</a> </li>
+            </nav>
+        </aside>
+
+<!-- PAGE BODDY -->
         <main class="mainContent
-                    col-desktop-7
-                    col-tablet-8
-                    col-mobile-12">
+                       col-desktop-7
+                       col-tablet-8
+                       col-mobile-12
+                       mainPadingJson">
 
-            <section class="json">
-                <h1>gostaria de saber um pouco mais sobre STAR WARS?</h1>
+            <section  class="apiRegistration">
+                <h1>remover informações da API!</h1>
 
-                <!-- API STAR WARS -->
-                <div class="buttonsApi">
+                <!-- TEBELA -->
+                <div class="tabelaListar">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>NATUREZA</th>
+                                <th>NOME</th>
+                                <th>EDITAR</th>
+                            </tr>
+                        </thead>
+    
+                        <tbody class="tableLister">
+                            <td>{{id}}</td>
+                            <td>{{natureza}}</td>
+                            <td>{{nome}}</td>
+                            <td id="edit"><a href="/edit/{{id}}">EDITAR</a></td>
+                        </tbody>
 
-                    <button><a href="swPeople.html">pessoas</a></button>
-                    <button><a href="swPlanets.html">planetas</a></button>
-                    <button><a href="swStarship.html">naves</a></button>
-                    <button><a href="swFilms.html">filmes</a></button>
-                    <button><a href="swSpecies.html">espécies</a></button>
-                    <button><a href="swVehicles.html">veículos</a></button>
-
+                    </table>
                 </div>
 
-                <!-- CARD STAR WARS -->
-                <div class="api">
-                    <figure>
-
-                        <img src="../img/sistemaSolar/starWars.jpg" id="img">
-
-                    </figure>
-                </div>
-
-                <!-- ADMIN SECTION -->
-                <div id="link">
-                    <a href="login.html">área admin</a>
-                </div>
             </section>
         </main>
-        
-        <!-- RODAPÉ -->
-        <footer>
-    
-            <div>
-                <p>RAFAEL VIEIRA | 2020 | Fotos STAR WARS => <a href="http://colorindonuvens.com" target="blank">Colorindo Nuvens</a></p>
-            </div>
-    
-        </footer>
 
+    <!-- FOOTER -->
+    <footer>
+
+        <div>
+            <p>RAFAEL VIEIRA | 2020 | Fotos STAR WARS => <a href="http://colorindonuvens.com" target="blank">Colorindo Nuvens</a></p>
+        </div>
+
+    </footer>
+    
+    
     <!-- JS -->
     <script src="../js/animation.js"></script>
     <script src="../js/carousel.js"></script>
-    <!-- <script src="../js/api.js"></script> -->
 </body>
 </html>
